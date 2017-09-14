@@ -1,0 +1,28 @@
+21:05:02 <aindilis2> Hi, I am writing an Emacs major mode for cyc
+21:05:08 <aindilis2> also a perl mode
+21:05:11 <aindilis2> perl api I mean
+21:05:25 <aindilis2> and I'm just looking for some help with the #$constant
+      syntax
+21:05:35 <aindilis2> I have a mode, called KBS-mode, which works with KIF
+21:05:54 <aindilis2> and it translates it to this weird format I wrote which
+      isn't terribly well thought out
+21:06:47 <aindilis2> so for instance KIF's (and ?X ?Y) would look like ("and"
+      var-X var-Y) to Emacs, to Perl it would be ["and", \*{'::?X'},
+      \*{'::?Y'}].
+21:07:32 <aindilis2> so I'm writing a couple of different modes.  I feel like
+      an idiot asking if there is already an Emacs mode for Cyc.  There has to
+      be.  Some kind of ilisp or something
+21:07:57 <aindilis2> some of them are pure elisp - so that others may use them
+21:08:07 <aindilis2> the others, do IPC through my "MAS" called UniLang
+21:08:16 <aindilis2> those are the hybrid modes
+21:08:40 <aindilis2> I'm running into a problem printing from emacs data
+      structures to perl data structures from within emacs
+21:10:02 <aindilis2> the #$constant notation is causing me some issues,
+      because I don't readily see how to singly quote something (and escape
+      all inside single quotes etc) using Emacs, and so I'm using double
+      quotes, but silly Emacs makes it darned near impossible to quote the $,
+      which is a special character to Perl double-quoted strings.
+21:10:59 <aindilis2> Emacs allow "$" or "\\$" but not "\$"
+21:13:34 <aindilis2> I asked in #emacs and they recommended I talk to you Doug
+21:14:43 <aindilis2> dmiles: hey
+#opencyc> 
